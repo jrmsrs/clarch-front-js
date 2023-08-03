@@ -1,0 +1,1 @@
+Layer responsável por fazer a injeção de dependências e inicializar a aplicação.

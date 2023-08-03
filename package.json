@@ -1,0 +1,47 @@
+{
+  "name": "ca-frontend-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=4000",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test": "vitest run       --config ./vitest.config.ts --passWithNoTests --silent",
+    "test:w": "vitest watch   --config ./vitest.config.ts --passWithNoTests --silent",
+    "test:c": "vitest run     --config ./vitest.config.ts --passWithNoTests --silent --coverage",
+    "test:s": "vitest related --config ./vitest.config.ts --passWithNoTests --silent --run",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@types/axios": "^0.14.0",
+    "@types/node": "^20.4.5",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "@vitejs/plugin-react": "^4.0.4",
+    "@vitest/coverage-v8": "^0.34.1",
+    "commitlint": "^17.6.7",
+    "eslint": "^8.46.0",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.8",
+    "vitest": "^0.34.1"
+  },
+  "packageManager": "yarn@3.6.1"
+}
