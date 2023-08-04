@@ -1,4 +1,4 @@
-Layer que trata da renderização de componentes, controle de estado e gerenciamento de rotas.
+Layer que trata da renderização de componentes, controle de estado e gerenciamento de rotas. A implementação do front-end em si.
 
 {PageName}Page -> [Abstract]Validation
 
