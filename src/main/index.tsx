@@ -5,5 +5,5 @@ import { Router } from '@/presentation'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Router />
-  </React.StrictMode>,
+  </React.StrictMode>
 )

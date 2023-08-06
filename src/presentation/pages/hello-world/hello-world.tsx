@@ -3,7 +3,7 @@ import reactLogo from '../../assets/react.svg'
 import viteLogo from '/vite.svg'
 import './hello-world.css'
 
-function HelloWorld() {
+function HelloWorld (): JSX.Element {
   const [count, setCount] = useState(0)
 
   return (
@@ -18,7 +18,7 @@ function HelloWorld() {
       </div>
       <h1>Hello World!</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => { setCount((count) => count + 1) }}>
           count is {count}
         </button>
       </div>
