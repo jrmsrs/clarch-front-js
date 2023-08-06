@@ -20,12 +20,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "rootDir": "src",
+    // "rootDir": "src",
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
     },
   },
-  "include": ["src"],
+  "include": ["src", "vite.config.ts", "vitest.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

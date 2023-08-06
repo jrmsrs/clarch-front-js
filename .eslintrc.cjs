@@ -2,18 +2,28 @@ module.exports = {
   root: true,
   env: { browser: true, es2022: true },
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+    'standard-with-typescript',
+    // 'eslint:recommended',
+    // 'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
     'plugin:markdown/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  parserOptions: {
+    project: ['./tsconfig.json'],
+    // ecmaFeatures: { jsx: true },
+  },
+  plugins: ['react-refresh', 'react', 'import', '@typescript-eslint'],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
+    'import/no-absolute-path': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
   },
 }
