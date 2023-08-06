@@ -23,6 +23,8 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'import/no-absolute-path': 'off',
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
   },
