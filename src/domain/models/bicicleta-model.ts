@@ -5,3 +5,5 @@ export type Bicicleta = {
   ano: string
   numero: number
 }
+
+export type BicicletaParams = Omit<Bicicleta, 'id'>
