@@ -3,8 +3,8 @@ import type { BicicletasQuery } from '@/domain/usecases'
 import { HttpStatusCode } from '@/data/http'
 import type { HttpGetClient } from '@/data/http'
 
-const formatUrl = (url: string = ''): string => {
-  return `${String(import.meta.env.VITE_EQUIPAMENTO_URL)}/bicicleta${url}`
+const formatUrl = (path: string = ''): string => {
+  return `${String(import.meta.env.VITE_EQUIPAMENTO_URL)}/bicicleta${path}`
 }
 
 export class RemoteBicicletasQuery implements BicicletasQuery {
@@ -17,7 +17,7 @@ export class RemoteBicicletasQuery implements BicicletasQuery {
     const httpResponse = await this.httpGetClient.get({ url: serverUrl })
     const remoteBicicletas = httpResponse.body as Bicicleta[] ?? []
     switch (httpResponse.statusCode) {
-      case HttpStatusCode.ok: return remoteBicicletas.map(bicicleta => ({ ...bicicleta, ano: bicicleta.ano.toString() }))
+      case HttpStatusCode.ok: return remoteBicicletas.map(bicicleta => ({ ...bicicleta }))
       default: throw new Error('Algo inesperado aconteceu.')
     }
   }
@@ -27,7 +27,7 @@ export class RemoteBicicletasQuery implements BicicletasQuery {
     const httpResponse = await this.httpGetClient.get({ url: serverUrl })
     const remoteBicicleta = httpResponse.body as Bicicleta ?? {}
     switch (httpResponse.statusCode) {
-      case HttpStatusCode.ok: return { ...remoteBicicleta, ano: remoteBicicleta.ano.toString() }
+      case HttpStatusCode.ok: return { ...remoteBicicleta }
       default: throw new Error('Algo inesperado aconteceu.')
     }
   }
