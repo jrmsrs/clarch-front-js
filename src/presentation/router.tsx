@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HelloWorld, Main } from '@/presentation/pages'
+import { PageContainer } from '@/presentation/components'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -15,7 +16,9 @@ const router = createBrowserRouter([
 
 const Router = (): JSX.Element => {
   return (
-    <RouterProvider router={router} />
+    <PageContainer>
+      <RouterProvider router={router} />
+    </PageContainer>
   )
 }
 
