@@ -1,11 +1,11 @@
-import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom'
-import { HelloWorld } from '@/presentation/pages'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { HelloWorld, Main } from '@/presentation/pages'
 import './index.css'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Link to={'/hello-world'}>go to /hello-world</Link>
+    element: <Main />
   },
   {
     path: '/hello-world',
