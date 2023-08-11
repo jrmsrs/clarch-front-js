@@ -21,11 +21,11 @@
     "noFallthroughCasesInSwitch": true,
 
     // "rootDir": "src",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["src/*"],
     },
   },
-  "include": ["src", "vite.config.ts", "vitest.config.ts"],
+  "include": ["src", "__mocks__", "vite.config.ts", "vitest.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
