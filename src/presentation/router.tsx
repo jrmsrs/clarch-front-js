@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom'
 import { HelloWorld } from '@/presentation'
-import '@/presentation/styles/global.css'
+import './index.css'
 
 const router = createBrowserRouter([
   {

@@ -11,7 +11,7 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: ['./tsconfig.json'],
+    project: ['./tsconfig.json', './tailwind.config.js'],
     // ecmaFeatures: { jsx: true },
   },
   plugins: ['react-refresh', 'react', 'import', '@typescript-eslint'],
