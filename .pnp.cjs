@@ -30,6 +30,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@commitlint/cli", "npm:17.6.7"],\
             ["@commitlint/config-conventional", "npm:17.6.7"],\
+            ["@faker-js/faker", "npm:8.0.2"],\
             ["@types/axios", "npm:0.14.0"],\
             ["@types/node", "npm:20.4.5"],\
             ["@types/react", "npm:18.2.18"],\
@@ -898,6 +899,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@eslint-js-npm-8.46.0-3cfe1ee88b-7aed479832.zip/node_modules/@eslint/js/",\
           "packageDependencies": [\
             ["@eslint/js", "npm:8.46.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@faker-js/faker", [\
+        ["npm:8.0.2", {\
+          "packageLocation": "./.yarn/cache/@faker-js-faker-npm-8.0.2-093b9ec0b2-cf73daf9a5.zip/node_modules/@faker-js/faker/",\
+          "packageDependencies": [\
+            ["@faker-js/faker", "npm:8.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2121,6 +2131,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ca-frontend-test", "workspace:."],\
             ["@commitlint/cli", "npm:17.6.7"],\
             ["@commitlint/config-conventional", "npm:17.6.7"],\
+            ["@faker-js/faker", "npm:8.0.2"],\
             ["@types/axios", "npm:0.14.0"],\
             ["@types/node", "npm:20.4.5"],\
             ["@types/react", "npm:18.2.18"],\
