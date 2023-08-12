@@ -2,7 +2,16 @@ import { Link } from 'react-router-dom'
 
 function HelloWorld (): JSX.Element {
   return (
-    <Link to={'/hello-world'}>go to /hello-world</Link>
+    <>
+      <ul>
+        <li>
+          <Link to={'/bicicletas'}>go to /bicicletas</Link>
+        </li>
+        <li>
+          <Link to={'/hello-world'}>go to /hello-world</Link>
+        </li>
+      </ul>
+    </>
   )
 }
 

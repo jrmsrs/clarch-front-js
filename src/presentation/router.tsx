@@ -1,24 +1,26 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { HelloWorld, Main } from '@/presentation/pages'
+import { HelloWorld, Main, Bicicletas } from '@/presentation/pages'
 import { PageContainer } from '@/presentation/components'
 import './index.css'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Main />
+    element: <PageContainer><Main /></PageContainer>
+  },
+  {
+    path: '/bicicletas',
+    element: <PageContainer><Bicicletas /></PageContainer>
   },
   {
     path: '/hello-world',
-    element: <HelloWorld />
+    element: <PageContainer><HelloWorld /></PageContainer>
   }
 ])
 
 const Router = (): JSX.Element => {
   return (
-    <PageContainer>
-      <RouterProvider router={router} />
-    </PageContainer>
+    <RouterProvider router={router} />
   )
 }
 
