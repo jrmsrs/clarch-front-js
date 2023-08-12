@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../presentation/assets/background.svg');
+  background-image: url('../presentation/assets/bg-dark.svg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -91,5 +91,10 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  html, body {
+    background-image: url('../presentation/assets/bg-light.svg');
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
