@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 
 const PageContainer: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
-    <div className="w-full px-4">
-      <header className='bg-zinc-900 p-4 rounded-t-md'>
-        <Link to={'/'}>bicicletário</Link>
-      </header>
-      <main className='bg-zinc-800 p-4 rounded-b-md min-h-[32rem]'>
-        {children}
-      </main>
+    <div className='p-4'>
+      <div className="w-full backdrop-blur-xl rounded-2xl">
+        <header className='bg-zinc-900 p-4 rounded-t-2xl'>
+          <Link className='text-white' to={'/'}>bicicletário</Link>
+        </header>
+        <main className='bg-zinc-800 p-4 rounded-b-2xl min-h-[32rem] shadow-2xl opacity-75 '>
+          {children}
+        </main>
+      </div>
     </div>
   )
 }
