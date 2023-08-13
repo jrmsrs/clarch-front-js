@@ -5,7 +5,7 @@ function Bicicletas (): JSX.Element {
     <div>
       <h1>Listagem de bicicletas</h1>
       <ul>
-      <li>
+        <li>
           <Link to={'/bicicletas/1'}>go to /bicicletas/1</Link>
         </li>
         <li>

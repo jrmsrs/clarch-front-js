@@ -12,7 +12,7 @@ const TitleBar = (props: TitleBarProps) => {
       <div>
         <Link className='text-black dark:text-white' to={'/'}>{props.title}</Link>
       </div>
-      <div className='w-16'></div>
+      <div className='w-16' />
     </header>
   )
 }
