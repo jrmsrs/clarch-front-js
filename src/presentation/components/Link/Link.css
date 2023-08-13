@@ -1,0 +1,56 @@
+:root {
+  --link-color: #646cff;
+  --link-color-hover: #ffbffa;
+  --stroke-size-pos: 1.05px;
+  --stroke-size-neg: calc(var(--stroke-size-pos) * -1);
+}
+
+.text-stroke {
+  text-shadow: 
+    var(--stroke-size-pos) var(--stroke-size-neg) var(--link-color-hover),
+    var(--stroke-size-pos) 0                      var(--link-color-hover),
+    var(--stroke-size-pos) var(--stroke-size-pos) var(--link-color-hover),
+    0                      var(--stroke-size-neg) var(--link-color-hover),
+    var(--stroke-size-neg) var(--stroke-size-neg) var(--link-color-hover),
+    var(--stroke-size-neg) 0                      var(--link-color-hover),
+    var(--stroke-size-neg) var(--stroke-size-pos) var(--link-color-hover),
+    0                      var(--stroke-size-pos) var(--link-color-hover);
+}
+
+.text-stroke:hover {
+  text-shadow: 
+    var(--stroke-size-pos) var(--stroke-size-neg) var(--link-color),
+    var(--stroke-size-pos) 0                      var(--link-color),
+    var(--stroke-size-pos) var(--stroke-size-pos) var(--link-color),
+    0                      var(--stroke-size-neg) var(--link-color),
+    var(--stroke-size-neg) var(--stroke-size-neg) var(--link-color),
+    var(--stroke-size-neg) 0                      var(--link-color),
+    var(--stroke-size-neg) var(--stroke-size-pos) var(--link-color),
+    0                      var(--stroke-size-pos) var(--link-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-stroke {
+    text-shadow: 
+      var(--stroke-size-pos) var(--stroke-size-neg) var(--link-color),
+      var(--stroke-size-pos) 0                      var(--link-color),
+      var(--stroke-size-pos) var(--stroke-size-pos) var(--link-color),
+      0                      var(--stroke-size-neg) var(--link-color),
+      var(--stroke-size-neg) var(--stroke-size-neg) var(--link-color),
+      var(--stroke-size-neg) 0                      var(--link-color),
+      var(--stroke-size-neg) var(--stroke-size-pos) var(--link-color),
+      0                      var(--stroke-size-pos) var(--link-color);
+  }
+  
+  .text-stroke:hover {
+    text-shadow: 
+      var(--stroke-size-pos) var(--stroke-size-neg) var(--link-color-hover),
+      var(--stroke-size-pos) 0                      var(--link-color-hover),
+      var(--stroke-size-pos) var(--stroke-size-pos) var(--link-color-hover),
+      0                      var(--stroke-size-neg) var(--link-color-hover),
+      var(--stroke-size-neg) var(--stroke-size-neg) var(--link-color-hover),
+      var(--stroke-size-neg) 0                      var(--link-color-hover),
+      var(--stroke-size-neg) var(--stroke-size-pos) var(--link-color-hover),
+      0                      var(--stroke-size-pos) var(--link-color-hover);
+  }
+}
