@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import type { Bicicleta } from '@/domain/models'
 import { RemoteBicicletasQuery } from './remote'
 import { HttpGetClientSpy } from '@/data/test'
+import { NotFoundError, UnexpectedError } from '@/domain/errors'
 
 const makeSut = () => {
   const httpGetClientSpy = new HttpGetClientSpy<Bicicleta>()
@@ -23,6 +24,10 @@ const bicicletaObj = {
 describe('remote bicicletas-query usecase getAll()', () => {
   it('should call HttpGetClient with correct url', async () => {
     const { sut, httpGetClientSpy } = makeSut()
+    httpGetClientSpy.response = {
+      statusCode: 200,
+      body: [bicicletaObj]
+    }
     await sut.getAll()
     expect(httpGetClientSpy.url).toBe(`${String(import.meta.env.VITE_EQUIPAMENTO_URL)}/bicicleta`)
   })
@@ -44,7 +49,7 @@ describe('remote bicicletas-query usecase getAll()', () => {
       body: undefined
     }
     const promise = sut.getAll()
-    await expect(promise).rejects.toThrow(new Error('Algo inesperado aconteceu.'))
+    await expect(promise).rejects.toThrow(new UnexpectedError('bicicleta'))
   })
 })
 
@@ -72,6 +77,6 @@ describe('remote bicicletas-query usecase getById()', () => {
       body: undefined
     }
     const promise = sut.getById(1)
-    await expect(promise).rejects.toThrow(new Error('Algo inesperado aconteceu.'))
+    await expect(promise).rejects.toThrow(new NotFoundError('bicicleta'))
   })
 })
