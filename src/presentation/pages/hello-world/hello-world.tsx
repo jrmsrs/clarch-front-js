@@ -16,9 +16,9 @@ function HelloWorld (): JSX.Element {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Hello World!</h1>
+      <h1 aria-label='heading'>Hello World!</h1>
       <div className="card">
-        <button onClick={() => { setCount((count) => count + 1) }}>
+        <button aria-label='counter' onClick={() => { setCount((count) => count + 1) }}>
           count is {count}
         </button>
       </div>
