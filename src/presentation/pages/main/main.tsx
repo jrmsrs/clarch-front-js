@@ -3,7 +3,7 @@ import { Link } from '@/presentation/components'
 function HelloWorld (): JSX.Element {
   return (
     <>
-      <ul>
+      <ul aria-label="navlinks">
         <li>
           <Link to={'/bicicletas'}>go to /bicicletas</Link>
         </li>
