@@ -29,7 +29,7 @@ describe('remote bicicletas-query usecase getAll()', () => {
       body: [bicicletaObj]
     }
     await sut.getAll()
-    expect(httpGetClientSpy.url).toBe(`${String(import.meta.env.VITE_EQUIPAMENTO_URL)}/bicicleta`)
+    expect(httpGetClientSpy.url).toBe(`${String(import.meta.env.VITE_SERVER)}/bicicleta`)
   })
 
   it('should return a list of bicicletas if HttpGetClient returns 200', async () => {
@@ -57,7 +57,7 @@ describe('remote bicicletas-query usecase getById()', () => {
   it('should call HttpGetClient with correct url', async () => {
     const { sut, httpGetClientSpy } = makeSut()
     await sut.getById(1)
-    expect(httpGetClientSpy.url).toBe(`${String(import.meta.env.VITE_EQUIPAMENTO_URL)}/bicicleta/1`)
+    expect(httpGetClientSpy.url).toBe(`${String(import.meta.env.VITE_SERVER)}/bicicleta/1`)
   })
 
   it('should return a bicicleta if HttpGetClient returns 200', async () => {

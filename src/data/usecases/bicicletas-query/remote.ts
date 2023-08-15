@@ -5,7 +5,7 @@ import type { HttpGetClient } from '@/data/http'
 import { NoContentFoundError, NotFoundError, UnexpectedError } from '@/domain/errors'
 
 const formatUrl = (path: string = ''): string => {
-  return `${String(import.meta.env.VITE_EQUIPAMENTO_URL)}/bicicleta${path}`
+  return `${String(import.meta.env.VITE_SERVER)}/bicicleta${path}`
 }
 
 export class RemoteBicicletasQuery implements BicicletasQuery {
