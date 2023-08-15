@@ -4,9 +4,11 @@ function Bicicletas (): JSX.Element {
   const { bicicletaId } = useParams()
 
   return (
-    <div>
-      <h1>Bicicleta ID-{bicicletaId}</h1>
-    </div>
+    <>
+      <h1 aria-label="heading">
+        Bicicleta ID-{bicicletaId}
+      </h1>
+    </>
   )
 }
 
