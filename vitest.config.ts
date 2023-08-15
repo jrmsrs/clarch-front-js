@@ -7,9 +7,12 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     coverage: {
-      reporter: ['lcov', 'html'],
+      reporter: ['text', 'lcov', 'html'],
       all: true,
-      exclude: [...configDefaults.coverage.exclude ?? '', '**/.pnp.*', '**/*.js', '**/*.cjs', '**/index.ts', '**/domain/*']
+      exclude: [
+        ...configDefaults.coverage.exclude ?? '',
+        '**/.pnp.*', '**/*.d.ts', '**/*.js', '**/*.cjs', '**/index.ts'
+      ]
     }
   },
   resolve: {
