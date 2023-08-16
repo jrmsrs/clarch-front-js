@@ -11,7 +11,14 @@ export default defineConfig({
       all: true,
       exclude: [
         ...configDefaults.coverage.exclude ?? '',
-        '**/.pnp.*', '**/*.d.ts', '**/*.js', '**/*.cjs', '**/index.ts'
+        // config files and scripts
+        '**/*.js', '**/*.cjs', '**/.pnp.*',
+        // types and abstract classes
+        '**/*.d.ts',
+        // used only for export
+        '**/index.ts',
+        // used only to render the app
+        'src/main/index.tsx'
       ]
     }
   },
