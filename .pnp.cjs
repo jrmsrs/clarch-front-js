@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:10.4.14"],\
             ["axios", "npm:1.4.0"],\
             ["commitlint", "npm:17.6.7"],\
+            ["dotenv", "npm:16.3.1"],\
             ["eslint", "npm:8.46.0"],\
             ["eslint-config-standard-with-typescript", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:37.0.0"],\
             ["eslint-plugin-import", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:2.28.0"],\
@@ -64,7 +65,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tailwindcss", "npm:3.3.3"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
             ["vite", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:4.4.8"],\
-            ["vitest", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:0.34.1"]\
+            ["vitest", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:0.34.1"],\
+            ["web-vitals", "npm:3.4.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2391,6 +2393,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:10.4.14"],\
             ["axios", "npm:1.4.0"],\
             ["commitlint", "npm:17.6.7"],\
+            ["dotenv", "npm:16.3.1"],\
             ["eslint", "npm:8.46.0"],\
             ["eslint-config-standard-with-typescript", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:37.0.0"],\
             ["eslint-plugin-import", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:2.28.0"],\
@@ -2410,7 +2413,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tailwindcss", "npm:3.3.3"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
             ["vite", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:4.4.8"],\
-            ["vitest", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:0.34.1"]\
+            ["vitest", "virtual:8e1e72b8ec8b0bd9622effbd88e4a6a6c5e016df237a62189ac5807e40c2c0618d8ac80a23aea9613510acf62754d4a1b51c3e2ba1e15993084179f0725f1977#npm:0.34.1"],\
+            ["web-vitals", "npm:3.4.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -3221,6 +3225,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["dot-prop", "npm:5.3.0"],\
             ["is-obj", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dotenv", [\
+        ["npm:16.3.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.3.1-e6d380a398-15d75e7279.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8564,6 +8577,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["w3c-xmlserializer", "npm:4.0.0"],\
             ["xml-name-validator", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["web-vitals", [\
+        ["npm:3.4.0", {\
+          "packageLocation": "./.yarn/cache/web-vitals-npm-3.4.0-714b95cdb9-6baac51503.zip/node_modules/web-vitals/",\
+          "packageDependencies": [\
+            ["web-vitals", "npm:3.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\

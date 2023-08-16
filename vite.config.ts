@@ -1,12 +1,21 @@
-import { defineConfig } from 'vite'
+import { loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
+import dotenv from 'dotenv'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': '/src'
+dotenv.config()
+
+export default ({ command, mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+
+  return {
+    plugins: [react()],
+    define: {
+      'import.meta.env.VITE_VERCEL_ANALYTICS_ID': JSON.stringify(env.VERCEL_ANALYTICS_ID)
+    },
+    resolve: {
+      alias: {
+        '@': '/src'
+      }
     }
   }
-})
+}

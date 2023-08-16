@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Router } from '@/presentation'
+import { reportWebVitals } from './vitals'
 import './global.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -8,3 +9,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Router />
   </React.StrictMode>
 )
+
+void reportWebVitals()
