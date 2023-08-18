@@ -1,14 +1,38 @@
 import '@testing-library/jest-dom'
-import { cleanup } from '@testing-library/react'
+import { cleanup, waitForElementToBeRemoved } from '@testing-library/react'
 import { Bicicletas } from '@/presentation/pages'
 import { makePageSut } from '@/presentation/test'
+import { BicicletasQuerySpy } from '../tests/mock-bicicletas-query'
+import { faker } from '@faker-js/faker'
+
+const awaitPageLoad = async (sut: any) => {
+  await waitForElementToBeRemoved(() => sut.getByLabelText('loading'))
+}
 
 describe('Bicicleta Page', () => {
   afterEach(cleanup)
 
-  it('should render with initial state', () => {
-    const { sut } = makePageSut(<Bicicletas />)
+  it('should render with initial state', async () => {
+    const numberOfBicicletas = faker.number.int(100)
+    const { sut } = makePageSut(<Bicicletas query={new BicicletasQuerySpy(numberOfBicicletas)} />)
     expect(sut.getByLabelText('heading')).toBeVisible()
+    expect(sut.getByLabelText('loading')).toBeVisible()
+    await awaitPageLoad(sut)
+  })
+
+  it('should render with error state', async () => {
+    const errorMsg = faker.lorem.sentence()
+    const { sut } = makePageSut(<Bicicletas query={new BicicletasQuerySpy(0, errorMsg)} />)
+    await awaitPageLoad(sut)
+    expect(sut.getByLabelText('error')).toBeVisible()
+    expect(sut.getByLabelText('error').textContent).toBe(errorMsg)
+  })
+
+  it('should render with success state', async () => {
+    const numberOfBicicletas = faker.number.int(100)
+    const { sut } = makePageSut(<Bicicletas query={new BicicletasQuerySpy(numberOfBicicletas)} />)
+    await awaitPageLoad(sut)
     expect(sut.getByLabelText('list')).toBeVisible()
+    expect(sut.getByLabelText('list').children.length).toBe(numberOfBicicletas)
   })
 })
