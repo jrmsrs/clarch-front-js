@@ -1,6 +1,11 @@
 import { Link } from '@/presentation/components'
+import type { BicicletasQuery } from '@/domain/usecases'
 
-function Bicicletas (): JSX.Element {
+interface Props {
+  query: BicicletasQuery
+}
+
+const Bicicletas: React.FC<Props> = (props: Props) => {
   return (
     <>
       <h1 aria-label="heading">Listagem de bicicletas</h1>
