@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import type { Bicicleta } from '@/domain/models'
+import { type Bicicleta, BicicletaStatus } from '@/domain/models'
 import { RemoteBicicletasQuery } from './remote'
 import { HttpGetClientSpy } from '@/data/test'
 import { NoContentFoundError, NotFoundError, UnexpectedError } from '@/domain/errors'
@@ -17,7 +17,8 @@ const makeBicicleta = (): Bicicleta => ({
   modelo: faker.vehicle.vrm(),
   ano: `${faker.date.past().getFullYear()}`,
   marca: faker.company.name(),
-  numero: faker.number.int()
+  numero: faker.number.int(),
+  status: faker.helpers.arrayElement(Object.values(BicicletaStatus))
 })
 
 describe('remote bicicletas-query usecase getAll()', () => {

@@ -1,1 +1,1 @@
-export * from './bicicleta-model'
+export * from './bicicleta-model.d'
