@@ -1,15 +1,16 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { HelloWorld, Main, Bicicleta } from '@/presentation/pages'
+import { HelloWorld, Main } from '@/presentation/pages'
 import { PageContainer } from '@/presentation/components'
 import './index.css'
 import React from 'react'
 
 interface Props {
   makeBicicletas: React.FC
+  makeBicicleta: React.FC
 }
 
 const Router = (
-  { makeBicicletas }: Props
+  { makeBicicletas, makeBicicleta }: Props
 ) => {
   return (
     <RouterProvider router={createBrowserRouter([
@@ -23,7 +24,7 @@ const Router = (
       },
       {
         path: '/bicicletas/:bicicletaId',
-        element: <PageContainer><Bicicleta /></PageContainer>
+        element: <PageContainer>{React.createElement(makeBicicleta)}</PageContainer>
       },
       {
         path: '/hello-world',

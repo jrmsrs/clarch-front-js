@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client'
 import { Router } from '@/presentation'
 import { reportWebVitals } from './vitals'
 import './global.css'
-import { makeBicicletas } from './factories/pages/bicicletas/factory'
+import { makeBicicletas, makeBicicleta } from './factories/pages/bicicletas'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Router makeBicicletas={makeBicicletas} />
+    <Router
+      makeBicicletas={makeBicicletas}
+      makeBicicleta={makeBicicleta}
+    />
   </React.StrictMode>
 )
 

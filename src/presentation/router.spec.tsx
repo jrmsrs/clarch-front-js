@@ -6,7 +6,13 @@ describe('Router', () => {
   afterEach(cleanup)
 
   it('should render without crashing', () => {
-    const sut = render(<RouterProv />)
+    const MountedRouter = () => {
+      return <RouterProv
+        makeBicicletas={() => <div />}
+        makeBicicleta={() => <div />}
+      />
+    }
+    const sut = render(<MountedRouter />)
     expect(sut).toBeTruthy()
   })
 })

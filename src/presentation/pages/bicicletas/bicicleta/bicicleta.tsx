@@ -1,6 +1,10 @@
 import { useParams } from 'react-router-dom'
 
-function Bicicletas (): JSX.Element {
+interface Props {
+  query: any
+}
+
+const Bicicletas: React.FC<Props> = (props: Props) => {
   const { bicicletaId } = useParams()
 
   return (
