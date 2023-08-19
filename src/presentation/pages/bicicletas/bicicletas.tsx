@@ -25,7 +25,7 @@ const Bicicletas: React.FC<Props> = (props: Props) => {
       .finally(() => {
         setLoading(false)
       })
-  })
+  }, [query])
 
   return (
     <>
