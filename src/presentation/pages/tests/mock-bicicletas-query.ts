@@ -15,9 +15,9 @@ const genBicicleta = (): Bicicleta => ({
 export class BicicletasQuerySpy implements BicicletasQuery {
   result: Bicicleta[]
   errorMsg?: string
-  constructor (numberOfBicicletas: number, errorMsg?: string) {
-    this.result = Array.from({ length: numberOfBicicletas }, genBicicleta)
-    this.errorMsg = errorMsg
+  constructor (options: { numOfBicicletas?: number, bicicletaId?: number, errorMsg?: string }) {
+    this.result = Array.from({ length: options.numOfBicicletas ?? 1 }, genBicicleta)
+    this.errorMsg = options.errorMsg
   }
 
   async getAll (): Promise<Bicicleta[]> {
