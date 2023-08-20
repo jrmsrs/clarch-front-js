@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from 'react'
 import { Link } from '@/presentation/components'
 import type { BicicletasQuery } from '@/domain/usecases'
-import { useEffect, useState } from 'react'
 import type { Bicicleta } from '@/domain/models'
 
 interface Props {

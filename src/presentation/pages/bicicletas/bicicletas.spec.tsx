@@ -1,9 +1,9 @@
-import '@testing-library/jest-dom'
 import { cleanup, waitForElementToBeRemoved } from '@testing-library/react'
 import { Bicicletas } from '@/presentation/pages'
 import { makePageSut } from '@/presentation/test'
-import { BicicletasQuerySpy } from '../tests/mock-bicicletas-query'
+import { BicicletasQuerySpy } from '@/presentation/pages/tests/mock-bicicletas-query'
 import { faker } from '@faker-js/faker'
+import '@testing-library/jest-dom'
 
 const awaitPageLoad = async (sut: any) => {
   await waitForElementToBeRemoved(() => sut.getByLabelText('loading'))
@@ -13,7 +13,7 @@ describe('Bicicleta Page', () => {
   afterEach(cleanup)
 
   it('should render with initial state', async () => {
-    const numOfBicicletas = faker.number.int(100)
+    const numOfBicicletas = faker.number.int(50)
     const { sut } = makePageSut(<Bicicletas query={new BicicletasQuerySpy({ numOfBicicletas })} />)
     expect(sut.getByLabelText('heading')).toBeVisible()
     expect(sut.getByLabelText('loading')).toBeVisible()
@@ -29,7 +29,7 @@ describe('Bicicleta Page', () => {
   })
 
   it('should render with success state', async () => {
-    const numOfBicicletas = faker.number.int(100)
+    const numOfBicicletas = faker.number.int(50)
     const { sut } = makePageSut(<Bicicletas query={new BicicletasQuerySpy({ numOfBicicletas })} />)
     await awaitPageLoad(sut)
     expect(sut.getByLabelText('list')).toBeVisible()

@@ -1,4 +1,4 @@
-import type { Bicicleta, BicicletaParams } from '../models'
+import type { Bicicleta, BicicletaParams } from '@/domain/models'
 
 export interface BicicletasManagement {
   insert: (data: BicicletaParams) => Promise<Bicicleta>

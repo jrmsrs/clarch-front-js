@@ -1,7 +1,7 @@
-import '@testing-library/jest-dom'
 import { cleanup, fireEvent } from '@testing-library/react'
 import { HelloWorld } from '@/presentation/pages'
 import { makePageSut } from '@/presentation/test'
+import '@testing-library/jest-dom'
 
 describe('Hello World Page', () => {
   afterEach(cleanup)

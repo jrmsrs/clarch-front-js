@@ -1,4 +1,4 @@
-import type { Bicicleta } from '../models'
+import type { Bicicleta } from '@/domain/models'
 
 export interface BicicletasQuery {
   getAll: () => Promise<Bicicleta[]>

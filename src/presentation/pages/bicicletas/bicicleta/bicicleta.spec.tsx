@@ -1,9 +1,9 @@
-import '@testing-library/jest-dom'
 import { cleanup, waitForElementToBeRemoved } from '@testing-library/react'
 import { Bicicleta } from '@/presentation/pages'
 import { makePageSut } from '@/presentation/test'
 import { BicicletasQuerySpy } from '@/presentation/pages/tests/mock-bicicletas-query'
 import { faker } from '@faker-js/faker'
+import '@testing-library/jest-dom'
 
 const awaitPageLoad = async (sut: any) => {
   await waitForElementToBeRemoved(() => sut.getByLabelText('loading'))

@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom'
 import { cleanup, render } from '@testing-library/react'
 import { Router as RouterProv } from '.'
+import '@testing-library/jest-dom'
 
 describe('Router', () => {
   afterEach(cleanup)

@@ -1,7 +1,7 @@
-import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
 import { PageContainer } from '@/presentation/components'
 import { makeComponentSut } from '@/presentation/test'
+import '@testing-library/jest-dom'
 
 afterEach(cleanup)
 

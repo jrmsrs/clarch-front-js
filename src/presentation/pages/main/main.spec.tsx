@@ -1,7 +1,7 @@
-import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
 import { Main } from '@/presentation/pages'
 import { makePageSut } from '@/presentation/test'
+import '@testing-library/jest-dom'
 
 describe('Main Page', () => {
   afterEach(cleanup)
