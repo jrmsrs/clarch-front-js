@@ -1,6 +1,5 @@
 import type { BicicletasQuery } from '@/domain/usecases'
-import { type Bicicleta } from '@/domain/models'
-import { BicicletaStatus } from '@/domain/models'
+import { type Bicicleta, BicicletaStatus } from '@/domain/models'
 import { faker } from '@faker-js/faker'
 
 const genBicicleta = (): Bicicleta => ({
