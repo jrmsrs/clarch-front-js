@@ -18,7 +18,9 @@ export default defineConfig({
         // used only for export
         '**/index.ts',
         // used only to render the app
-        'src/main/index.tsx'
+        'src/main/index.tsx',
+        // factory functions
+        'src/main/factories/*'
       ]
     }
   },
