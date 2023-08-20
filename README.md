@@ -9,17 +9,19 @@ Primeiramente está sendo desenvolvido em React, mas com fim de testar a possibi
   <a href="https://conventionalcommits.org">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white" alt="Conventional Commits" />
   </a>
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=alert_status" alt="Alert Status" />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=sqale_index" alt="Maintainability Rating" /><br />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=coverage" alt="Coverage" />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=ncloc" alt="Lines of Code" />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=code_smells" alt="Code Smells" />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=sqale_rating" alt="Technical Debt" /><br />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=security_rating" alt="Security Rating" />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=bugs" alt="Bugs" />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=vulnerabilities" alt="Vulnerabilities" />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=duplicated_lines_density" alt="Duplicated Lines (%)" />
-  <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=reliability_rating" alt="Reliability Rating" />
+  <a href="https://sonarcloud.io/dashboard?id=jrmsrs_clarch-front-js">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=alert_status" alt="Alert Status" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=sqale_index" alt="Maintainability Rating" /><br />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=coverage" alt="Coverage" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=ncloc" alt="Lines of Code" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=code_smells" alt="Code Smells" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=sqale_rating" alt="Technical Debt" /><br />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=security_rating" alt="Security Rating" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=bugs" alt="Bugs" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=vulnerabilities" alt="Vulnerabilities" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=duplicated_lines_density" alt="Duplicated Lines (%)" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=jrmsrs_clarch-front-js&metric=reliability_rating" alt="Reliability Rating" />
+  </a>
 </p>
 
 ## Tecnologias
